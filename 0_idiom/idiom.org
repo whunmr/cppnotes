@@ -1,0 +1,35 @@
+* hi-locks
+# Hi-lock: (("||.*$" (0 (quote header-line) t)))
+# Hi-lock: (("TODO" (0 (quote error) t)))
+# Hi-lock: (("^@.*$" (0 (quote error) t)))
+# Hi-lock: (("^.*::::" (0 (quote icicle-search-current-input) t)))
+# Hi-lock: (("^.*:::" (0 (quote helm-ff-prefix) t)))
+# Hi-lock: (("^.*_::" (0 (quote hi-blue) t)))
+# Hi-lock: (("<c>[^<]*?</c>" (0 (quote outline-6) t)))
+# Hi-lock: ((" \\$.*$" (0 (quote menu) t)))
+
+* idiom
+
+** simplify code
+*** Like the output <<  operator, the input operator >> returns its left-hand operand as its result.
+FROM_::
+std::cin >> v1;
+std::cin >> v2;
+
+TO_::
+std::cin >> v1 >> v2;
+
+*** while (std::cin >> value), read in value, then check cin status
+*** overload input (>>) and output (<<) operators to read and write objects
+operator (=) to assign
+operator (+) to add two
+compound assignment operator (+=) to add
+
+
+
+** cautions
+*** char is signed on some machines and unsigned on others. If you need a tiny integer, explicitly specify either signed char or unsigned char.
+
+** should
+*** Use double for floating-point computations;
+    

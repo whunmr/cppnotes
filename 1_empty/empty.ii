@@ -1,0 +1,11 @@
+# 1 "empty.cpp"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "empty.cpp"
+
+int main(int argc, char *argv[])
+{
+    unsigned char uchar = -1;
+      int i = -1;
+    return ++(i);;
+}
