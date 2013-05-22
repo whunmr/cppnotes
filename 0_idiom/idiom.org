@@ -15,21 +15,36 @@
 FROM_::
 std::cin >> v1;
 std::cin >> v2;
-
 TO_::
 std::cin >> v1 >> v2;
-
 *** while (std::cin >> value), read in value, then check cin status
 *** overload input (>>) and output (<<) operators to read and write objects
 operator (=) to assign
 operator (+) to add two
 compound assignment operator (+=) to add
 
-
-
 ** cautions
 *** char is signed on some machines and unsigned on others. If you need a tiny integer, explicitly specify either signed char or unsigned char.
+*** if we use both unsigned and int values in an arithmetic expression, the int value ordinarily is converted to unsigned.
+*** Regardless of whether one or both operands are unsigned, if we subtract a value from an unsigned, we must be sure that the result cannot be negative
+unsigned u1 = 42, u2 = 10;
+std::cout << u1 - u2 << std::endl; // ok: result is 32
+std::cout << u2 - u1 << std::endl; // ok: but the result will wrap around
 
+    
 ** should
 *** Use double for floating-point computations;
+*** It is usually a good idea to define an object near the point at which the object is first used.
+
+** terminology
+*** 20 /* decimal */ 024 /* octal */ 0x14 /* hexadecimal */
+*** Separate compilation lets us split our programs into several files, each of which can be compiled independently.
+    
+
+** basic
+*** U unsigned   F float  L long/long double  LL longlong || alwasys using uppercase letter
+*** Two string literals that appear adjacent to one another and that are separated only by spaces, tabs, or newlines are concatenated into a single literal.   
+*** octal and hex digits after \, \12 (newline)  \115 ('M')  \x4d ('M')
+*** L'a' wide character literal, type is wchar_t
+*** To obtain a declaration that is not also a definition    extern int i;
     

@@ -1,0 +1,12 @@
+# 1 "reference.cpp"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "reference.cpp"
+int main(int argc, char *argv[])
+{
+ int iv = 3;
+ int &riv = iv;
+ riv = 4;
+
+    return 0;
+}
